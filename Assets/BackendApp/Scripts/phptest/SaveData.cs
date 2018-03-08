@@ -15,7 +15,11 @@ public class SaveData : MonoBehaviour {
 
         string url = "http://milovanpelt.nl/Json/WriteData.php";
         WWWForm form = new WWWForm();
-        form.AddField("Event", playerData.eventName);
+        form.AddField("Main", "StartMain");
+
+        //form.AddField("MakeRoom", "StartRoom");
+        //form.AddField("Event", playerData.eventName);
+        //form.AddField("TeamName", playerData.teamName);
         WWW www = new WWW(url, form);
         StartCoroutine(WaitForRequest(www));
     }
