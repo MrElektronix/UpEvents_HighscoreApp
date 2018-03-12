@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/FrontEndApp/scenes/BeginScreen.unity
+    guid: 567062adb31294269b4f77eaae1f0770
+  - enabled: 1
+    path: Assets/FrontEndApp/scenes/ChooseEvent.unity
+    guid: bc7808144b27f49948ecfc67e31f59ad
