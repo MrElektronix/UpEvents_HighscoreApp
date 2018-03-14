@@ -24,9 +24,11 @@ public class SpawnPanel : MonoBehaviour {
 	void Start(){
 		_playerCountTeam1 = PlayerPrefs.GetFloat ("ddValue1");
 		_playerCountTeam2 = PlayerPrefs.GetFloat ("ddValue2");
+
 	}
 
 	void Update(){
+		
 		if (_parentObj.tag == "ParentObj1") {
 			if (curPlayers <= _playerCountTeam1 - 1f) {
 				curPlayers++;

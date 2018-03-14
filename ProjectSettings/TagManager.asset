@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Canvas
+  - ParentObj1
+  - PlayerInfo
+  - PlayerCount2
+  - PlayerCount1
+  - ParentObj2
   layers:
   - Default
   - TransparentFX

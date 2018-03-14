@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222796870390329848}
   - component: {fileID: 114606042112486914}
   - component: {fileID: 114435937788427602}
+  - component: {fileID: 114937828425550664}
   m_Layer: 5
   m_Name: InputField (1)
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 222597028290329208}
   - component: {fileID: 114651185715614684}
   - component: {fileID: 114373487936838192}
+  - component: {fileID: 114023178146249240}
   m_Layer: 5
   m_Name: InputField (2)
   m_TagString: Untagged
@@ -93,6 +95,7 @@ GameObject:
   - component: {fileID: 114219672992872776}
   - component: {fileID: 114529829840224944}
   - component: {fileID: 114471386863686014}
+  - component: {fileID: 114703846424418974}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -134,6 +137,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114023178146249240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1677708311191014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92f856dadcef704aaff23ede69405c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailSpeler: {fileID: 114373487936838192}
 --- !u!114 &114070218997841068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +262,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114023178146249240}
+        m_MethodName: OnValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -310,7 +336,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114937828425550664}
+        m_MethodName: OnValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+OnChangeEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
@@ -471,6 +508,29 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114703846424418974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796371101509956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6f1ca23e51e1340ae1d8e8663e5948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114937828425550664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1012819940339530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1486e2b3896994684cc2f9c04c112a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naamSpeler: {fileID: 114435937788427602}
 --- !u!114 &114979252661344756
 MonoBehaviour:
   m_ObjectHideFlags: 1
