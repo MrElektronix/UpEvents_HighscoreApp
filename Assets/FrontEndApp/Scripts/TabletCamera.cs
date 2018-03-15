@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TabletCamera : MonoBehaviour {
 
-	private bool camAvaible;
+	private bool camAvaible; 
 	private WebCamTexture backCamera;
 	private Texture defaultBackGround;
 
