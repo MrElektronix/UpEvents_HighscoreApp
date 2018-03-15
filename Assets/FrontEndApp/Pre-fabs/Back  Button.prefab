@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114730409653852560}
   - component: {fileID: 114103564873798738}
   - component: {fileID: 114759617741077724}
+  - component: {fileID: 114177270247727924}
+  - component: {fileID: 114663791876842910}
   m_Layer: 5
   m_Name: Back  Button
   m_TagString: Untagged
@@ -86,7 +88,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114759617741077724}
+      - m_Target: {fileID: 114663791876842910}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -99,6 +101,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114177270247727924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836570351059710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc83416eea4b64771a5369cf083c2bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: 0
 --- !u!114 &114289821050105682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,10 +134,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -134,6 +148,18 @@ MonoBehaviour:
   m_Text: '<<<
 
 '
+--- !u!114 &114663791876842910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836570351059710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc83416eea4b64771a5369cf083c2bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: 0
 --- !u!114 &114730409653852560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,8 +227,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236, y: 156}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: -376.9931, y: 152.12756}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224536766799257332
 RectTransform:

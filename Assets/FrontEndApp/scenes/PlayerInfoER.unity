@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -168,22 +168,22 @@ Prefab:
     - target: {fileID: 224011773679225810, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 238.86566
+      value: 386.37433
       objectReference: {fileID: 0}
     - target: {fileID: 224011773679225810, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 157
+      value: 842
       objectReference: {fileID: 0}
     - target: {fileID: 224011773679225810, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224011773679225810, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224011773679225810, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
         type: 2}
@@ -214,6 +214,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086957660342196, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086957660342196, guid: a15584e91e72c4a7c81913f7b1ad9ac4,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a15584e91e72c4a7c81913f7b1ad9ac4, type: 2}
@@ -354,17 +364,17 @@ Prefab:
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 121
+      value: 742.6018
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
@@ -395,6 +405,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166835510831220, guid: bb0507af698b7425f9227cc887ca541f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166835510831220, guid: bb0507af698b7425f9227cc887ca541f,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb0507af698b7425f9227cc887ca541f, type: 2}
@@ -619,7 +639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.344666, y: 222}
+  m_AnchoredPosition: {x: 10.344666, y: 274.6775}
   m_SizeDelta: {x: -2301.6907, y: -566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006688028
@@ -735,7 +755,7 @@ Prefab:
     - target: {fileID: 224482345468460270, guid: 47f34a3e98a0847e68692d4fe2d6805b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -29.208572
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224482345468460270, guid: 47f34a3e98a0847e68692d4fe2d6805b,
         type: 2}
@@ -795,7 +815,7 @@ Prefab:
     - target: {fileID: 224556388840567176, guid: 47f34a3e98a0847e68692d4fe2d6805b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -44.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
         type: 2}
@@ -805,7 +825,27 @@ Prefab:
     - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -958.8001
+      value: -958.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224791189174918278, guid: 47f34a3e98a0847e68692d4fe2d6805b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47f34a3e98a0847e68692d4fe2d6805b, type: 2}
@@ -842,8 +882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 150}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 68, y: 856}
+  m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172491600
 MonoBehaviour:
@@ -866,10 +906,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -934,22 +974,22 @@ Prefab:
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -236
+      value: -341
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 156
+      value: 851.3981
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
@@ -980,6 +1020,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114289821050105682, guid: 26b61ade118264adab7f9fd1a1466848,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26b61ade118264adab7f9fd1a1466848, type: 2}

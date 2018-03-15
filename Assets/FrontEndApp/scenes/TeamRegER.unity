@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -488,10 +488,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -541,8 +541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198, y: -156}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 142, y: -117}
+  m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628608592
 MonoBehaviour:
@@ -691,22 +691,22 @@ Prefab:
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 191.63754
+      value: 153
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 152
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224572529684112956, guid: bb0507af698b7425f9227cc887ca541f,
         type: 2}
@@ -737,6 +737,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166835510831220, guid: bb0507af698b7425f9227cc887ca541f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166835510831220, guid: bb0507af698b7425f9227cc887ca541f,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb0507af698b7425f9227cc887ca541f, type: 2}
@@ -838,7 +848,6 @@ RectTransform:
   - {fileID: 628608591}
   - {fileID: 676207811}
   - {fileID: 1328138011}
-  - {fileID: 1164941843}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -879,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 150}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 15, y: 145}
+  m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754492866
 MonoBehaviour:
@@ -903,10 +912,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1453,8 +1462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.799995, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 204, y: 0}
+  m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084328648
 MonoBehaviour:
@@ -1589,20 +1598,20 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164941842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1914236012}
   - {fileID: 152476175}
   - {fileID: 485393761}
-  m_Father: {fileID: 753953052}
-  m_RootOrder: 7
+  m_Father: {fileID: 1654679562}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 134.61, y: 87.82324}
-  m_SizeDelta: {x: 75, y: 30}
+  m_AnchoredPosition: {x: 446, y: 0}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164941844
 MonoBehaviour:
@@ -1759,22 +1768,22 @@ Prefab:
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -233.10687
+      value: -216.4508
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 155
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 224323285281846910, guid: 26b61ade118264adab7f9fd1a1466848,
         type: 2}
@@ -1830,6 +1839,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114289821050105682, guid: 26b61ade118264adab7f9fd1a1466848,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26b61ade118264adab7f9fd1a1466848, type: 2}
@@ -2021,8 +2035,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.2, y: 130}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 34, y: 197}
+  m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550834068
 MonoBehaviour:
@@ -2045,7 +2059,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2251,10 +2265,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2314,7 +2328,7 @@ GameObject:
   - component: {fileID: 1654679564}
   - component: {fileID: 1654679563}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Team Input Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2331,13 +2345,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1084328647}
+  - {fileID: 1164941843}
   m_Father: {fileID: 753953052}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.40619, y: 87.82323}
-  m_SizeDelta: {x: 160, y: 25.8}
+  m_AnchoredPosition: {x: -217, y: -12}
+  m_SizeDelta: {x: 320, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654679563
 MonoBehaviour:
@@ -2360,7 +2375,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -2468,10 +2483,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 3
     m_AlignByGeometry: 0
