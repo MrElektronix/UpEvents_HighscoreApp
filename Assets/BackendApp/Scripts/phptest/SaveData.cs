@@ -1,27 +1,69 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using LitJson;
-using System.IO;
-using UnityEngine.Networking;
+
 
 public class SaveData : MonoBehaviour {
 
     public PlayerData playerData;
+    private WWW www;
+    private WWWForm form;
 
-    void Start()
+
+    private void Start()
     {
-        playerData = new PlayerData("Lasergamen", "Komkommers");
+        playerData = new PlayerData("Lasergamen",  "Team Deathmatch", "Sterrenteam");
 
-        string url = "http://milovanpelt.nl/Json/WriteData.php";
-        WWWForm form = new WWWForm();
-        form.AddField("Main", "StartMain");
-
+        //form.AddField("Main", "StartMain");
         //form.AddField("MakeRoom", "StartRoom");
-        //form.AddField("Event", playerData.eventName);
-        //form.AddField("TeamName", playerData.teamName);
-        WWW www = new WWW(url, form);
+        /*
+        form.AddField("Event", playerData.eventName);
+        form.AddField("TeamName", playerData.teamName);
+        form.AddField("GameMode", playerData.gameMode);
+        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+        form.AddField("CurrentTime", System.DateTime.Now.ToString("HH:mm:ss"));
+        */
+    }
+
+    private void NewForm(string url, WWWForm form)
+    {
+        www = new WWW(url, form);
         StartCoroutine(WaitForRequest(www));
+
+        
+    }
+
+    public void CreateDay()
+    {
+        string url = "http://localhost:3000/users";
+        form = new WWWForm();
+
+        form.AddField("MakeDay", 1);
+        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+
+        NewForm(url, form);
+    }
+
+    public void CreateEvent()
+    {
+        string url = "http://localhost:3000/users";
+        form = new WWWForm();
+
+        form.AddField("MakeEvent", 1);
+        form.AddField("EventName", "Lasergamen");
+        form.AddField("GameMode","Team Deatmatch");
+        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+
+        NewForm(url, form);
+    }
+
+    public void RemoveAllData()
+    {
+        string url = "http://localhost:3000/users";
+        form = new WWWForm();
+
+        form.AddField("RemoveData", 1);
+        NewForm(url, form);
     }
 
     IEnumerator WaitForRequest(WWW www)
@@ -38,12 +80,6 @@ public class SaveData : MonoBehaviour {
             Debug.Log("WWW Error: " + www.error);
         }
     }
-
-
-
-
-
-
 
     /*
     [HideInInspector]
