@@ -5,28 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/BeginScreen.unity
     guid: 567062adb31294269b4f77eaae1f0770
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/ChooseEvent.unity
     guid: bc7808144b27f49948ecfc67e31f59ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/TeamRegER.unity
     guid: 0b287a0db686045e49b15d5e5fdd7f06
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/TeamRegLT.unity
     guid: ba799ee23785a43009441ef4e9ca8cf8
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/PlayerInfoER.unity
     guid: af4da3b60414d4306aa97351996bd153
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/PlayerInfoLT.unity
     guid: 9de78d0f173a84f0c9aab3d40fa60a7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/PlayerTime.unity
     guid: 3c51f7fdf95ae47fc8d2ed66487803da
-  - enabled: 1
+  - enabled: 0
     path: Assets/FrontEndApp/scenes/Higschore.unity
     guid: 9a6bf9503d24844f4ad48a0f3722b45c
   - enabled: 1
