@@ -12,7 +12,7 @@ public class SaveData : MonoBehaviour {
 
     private void Start()
     {
-        playerData = new PlayerData("Lasergamen",  "Team Deathmatch", "Sterrenteam");
+        //playerData = new PlayerData("Lasergamen",  "Team Deathmatch", "Sterrenteam");
 
         //form.AddField("Main", "StartMain");
         //form.AddField("MakeRoom", "StartRoom");
@@ -28,14 +28,12 @@ public class SaveData : MonoBehaviour {
     private void NewForm(string url, WWWForm form)
     {
         www = new WWW(url, form);
-        StartCoroutine(WaitForRequest(www));
-
-        
+        StartCoroutine(WaitForRequest(www));       
     }
 
     public void CreateDay()
     {
-        string url = "http://localhost:3000/users";
+        string url = "http://localhost:3000/newDay";
         form = new WWWForm();
 
         form.AddField("MakeDay", 1);
@@ -46,23 +44,36 @@ public class SaveData : MonoBehaviour {
 
     public void CreateEvent()
     {
-        string url = "http://localhost:3000/users";
+        string url = "http://localhost:3000/newEvent";
         form = new WWWForm();
 
-        form.AddField("MakeEvent", 1);
-        form.AddField("EventName", "Lasergamen");
-        form.AddField("GameMode","Team Deatmatch");
+        form.AddField("EventName", PlayerPrefs.GetString("EventName").ToString());
+        form.AddField("GameMode", PlayerPrefs.GetString("GameMode").ToString());
         form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
 
         NewForm(url, form);
     }
 
-    public void RemoveAllData()
+    public void CreateERTeam()
     {
-        string url = "http://localhost:3000/users";
+        string url = "http://localhost:3000/newERTeam";
         form = new WWWForm();
 
-        form.AddField("RemoveData", 1);
+        form.AddField("TeamName", PlayerPrefs.GetString("EscapeRoomTeamName"));
+        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+
+        NewForm(url, form);
+    }
+
+    public void CreateLGTeam()
+    {
+        string url = "http://localhost:3000/newLGTeam";
+        form = new WWWForm();
+
+        form.AddField("TeamNameOne", PlayerPrefs.GetString("LaserTagTeamNameOne"));
+        form.AddField("TeamNameTwo", PlayerPrefs.GetString("LaserTagTeamNameTwo"));
+        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+
         NewForm(url, form);
     }
 
@@ -80,7 +91,6 @@ public class SaveData : MonoBehaviour {
             Debug.Log("WWW Error: " + www.error);
         }
     }
-
     /*
     [HideInInspector]
     public PlayerData playerData;

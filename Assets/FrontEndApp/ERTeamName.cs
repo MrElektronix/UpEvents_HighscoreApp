@@ -12,7 +12,6 @@ public class ERTeamName : MonoBehaviour {
 
 	void Start(){
 		TeamNameInput = gameObject.GetComponent<InputField> ();
-
 	}
 
 	void Update(){

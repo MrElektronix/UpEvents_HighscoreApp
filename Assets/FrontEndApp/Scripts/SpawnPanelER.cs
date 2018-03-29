@@ -7,7 +7,7 @@ public class SpawnPanelER : MonoBehaviour {
 	private float _playerCountTeam1;
 	private float curPlayers = 0;
 	private List<float> Players = new List<float> ();
-	private float addList = 1;
+	private float addList = 1;  
 	public GameObject playerPanel;
 	[SerializeField]
 	private GameObject _parentObj;
@@ -15,10 +15,6 @@ public class SpawnPanelER : MonoBehaviour {
 
 	void Start(){
 		_playerCountTeam1 = PlayerPrefs.GetFloat ("_ddValueER");
-
-
-
-
 	}
 
 	void Update ()
@@ -29,7 +25,7 @@ public class SpawnPanelER : MonoBehaviour {
 			GO.transform.SetParent (_parentObj.transform, false);
 		}
 
-		Debug.Log (Players.Count);
+		//Debug.Log (Players.Count);
 	}
 
 
