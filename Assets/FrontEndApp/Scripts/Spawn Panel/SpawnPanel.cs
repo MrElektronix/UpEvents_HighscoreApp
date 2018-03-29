@@ -30,14 +30,14 @@ public class SpawnPanel : MonoBehaviour {
 	void Update(){
 		
 		if (_parentObj.tag == "ParentObj1") {
-			if (curPlayers <= _playerCountTeam1 - 1f) {
+			if (curPlayers <= _playerCountTeam1) {
 				curPlayers++;
 				GameObject GO = Instantiate (playerPanel, transform.position, Quaternion.identity);
 				GO.transform.SetParent (_parentObj.transform, false);
 			}
 		} 
 		if (_parentObj2.tag == "ParentObj2") {
-			if (curPlayers2 <= _playerCountTeam2 - 1f) {
+			if (curPlayers2 <= _playerCountTeam2) {
 				curPlayers2++;
 				GameObject GO2 = Instantiate (playerPanel, transform.position, Quaternion.identity);
 				GO2.transform.SetParent (_parentObj2.transform, false);

@@ -19,7 +19,7 @@ public class SpawnPanelER : MonoBehaviour {
 
 	void Update ()
 	{
-		if (curPlayers <= _playerCountTeam1 -1) {
+		if (curPlayers <= _playerCountTeam1) {
 			curPlayers++;
 			GameObject GO = Instantiate (playerPanel, transform.position, Quaternion.identity);
 			GO.transform.SetParent (_parentObj.transform, false);
