@@ -1679,6 +1679,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1001 &1052903013
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 619.62195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 761.79895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744061461282884, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1052903014 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114633627881588926, guid: f059e4d77e376f84fb02dd219e392c36,
+    type: 2}
+  m_PrefabInternal: {fileID: 1052903013}
+  m_Script: {fileID: 11500000, guid: 4c51a1268c34a1045aeb6d2500f6d615, type: 3}
 --- !u!1 &1089047717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,7 +2835,6 @@ GameObject:
   - component: {fileID: 2144674948}
   - component: {fileID: 2144674947}
   - component: {fileID: 2144674946}
-  - component: {fileID: 2144674950}
   m_Layer: 5
   m_Name: Verder
   m_TagString: Untagged
@@ -2875,7 +2922,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2144674950}
+      - m_Target: {fileID: 1052903014}
         m_MethodName: CreateEvent
         m_Mode: 1
         m_Arguments:
@@ -2921,14 +2968,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2144674944}
---- !u!114 &2144674950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2144674944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c51a1268c34a1045aeb6d2500f6d615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

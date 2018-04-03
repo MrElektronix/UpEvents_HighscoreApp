@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 114703846424418974}
   m_Layer: 5
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6f1ca23e51e1340ae1d8e8663e5948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveData: {fileID: 0}
 --- !u!114 &114937828425550664
 MonoBehaviour:
   m_ObjectHideFlags: 1

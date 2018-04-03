@@ -10,6 +10,12 @@ TagManager:
   - PlayerCount2
   - PlayerCount1
   - ParentObj2
+  - Panel
+  - EndTime
+  - StartTime
+  - dropdown1
+  - dropdown2
+  - Save
   layers:
   - Default
   - TransparentFX

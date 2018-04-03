@@ -28,7 +28,7 @@ public class SaveData : MonoBehaviour {
     private void NewForm(string url, WWWForm form)
     {
         www = new WWW(url, form);
-        StartCoroutine(WaitForRequest(www));       
+        StartCoroutine(WaitForRequest(www));
     }
 
     public void CreateDay()
@@ -37,7 +37,6 @@ public class SaveData : MonoBehaviour {
         form = new WWWForm();
 
         form.AddField("MakeDay", 1);
-        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
 
         NewForm(url, form);
     }
@@ -49,7 +48,6 @@ public class SaveData : MonoBehaviour {
 
         form.AddField("EventName", PlayerPrefs.GetString("EventName").ToString());
         form.AddField("GameMode", PlayerPrefs.GetString("GameMode").ToString());
-        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
 
         NewForm(url, form);
     }
@@ -60,7 +58,6 @@ public class SaveData : MonoBehaviour {
         form = new WWWForm();
 
         form.AddField("TeamName", PlayerPrefs.GetString("EscapeRoomTeamName"));
-        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
 
         NewForm(url, form);
     }
@@ -72,7 +69,32 @@ public class SaveData : MonoBehaviour {
 
         form.AddField("TeamNameOne", PlayerPrefs.GetString("LaserTagTeamNameOne"));
         form.AddField("TeamNameTwo", PlayerPrefs.GetString("LaserTagTeamNameTwo"));
-        form.AddField("CurrentDate", System.DateTime.Today.ToString("dd/MM/yyyy"));
+
+        NewForm(url, form);
+    }
+
+    public void AddLGPlayers()
+    {
+
+    }
+
+    public void AddERPlayers(string name, string email)
+    {
+        string url = "http://localhost:3000/newERusers";
+        form = new WWWForm();
+
+        form.AddField("PlayerInfo_names", name);
+        form.AddField("PlayerInfo_email", email);
+
+        NewForm(url, form);
+    }
+
+    public void SendEmail()
+    {
+        string url = "http://localhost:3000/SendMail";
+        form = new WWWForm();
+
+        form.AddField("mail", 1);
 
         NewForm(url, form);
     }
