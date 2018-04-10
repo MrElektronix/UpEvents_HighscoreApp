@@ -780,6 +780,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f059e4d77e376f84fb02dd219e392c36, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1062812671 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114060989657612990, guid: f059e4d77e376f84fb02dd219e392c36,
+    type: 2}
+  m_PrefabInternal: {fileID: 1062812670}
+  m_Script: {fileID: 11500000, guid: b809675304f0bf4419945938ccfbebad, type: 3}
 --- !u!1 &1398633974
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,12 +980,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644dcf9f38fc9474dbd35e8ca63739bd, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2112992706 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114633627881588926, guid: f059e4d77e376f84fb02dd219e392c36,
-    type: 2}
-  m_PrefabInternal: {fileID: 1062812670}
-  m_Script: {fileID: 11500000, guid: 4c51a1268c34a1045aeb6d2500f6d615, type: 3}
 --- !u!1 &2123079618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2112992706}
+      - m_Target: {fileID: 1062812671}
         m_MethodName: CreateDay
         m_Mode: 1
         m_Arguments:

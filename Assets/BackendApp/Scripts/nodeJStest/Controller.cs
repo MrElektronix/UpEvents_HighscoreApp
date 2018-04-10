@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SocketIO;
 
 public class Controller : MonoBehaviour {
-    //public SocketIOComponent socket;
+    public SocketIOComponent socket;
 
-    /*
+    
     private void Start()
     {
         StartCoroutine(ConnectToServer());
@@ -21,5 +21,10 @@ public class Controller : MonoBehaviour {
         data["Score"] = "3000";
         socket.Emit("addData", new JSONObject(data));
     }
-    */
+
+    public void CreateDay()
+    {
+        socket.Emit("NewDay");
+    }
+    
 }
