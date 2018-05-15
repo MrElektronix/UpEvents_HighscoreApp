@@ -8,14 +8,14 @@ public class PlayerInfo : MonoBehaviour {
 	EmailValueChange _email;
 
 	public Dictionary<string,string> playerInfoDict = new Dictionary<string,string>();
-    public SaveData saveData;
+    //public Controller saveData;
 
 	void Start(){
 
         _name = gameObject.GetComponentInChildren<NameValueChange>();
 		_email = gameObject.GetComponentInChildren<EmailValueChange>();
 
-        saveData = GetComponent<SaveData>();
+        //saveData = GetComponent<Controller>();
 	}
 
 
@@ -43,7 +43,7 @@ public class PlayerInfo : MonoBehaviour {
             foreach (KeyValuePair<string, string> playerinfo in playerInfoDict)
             {
                 //saveData.AddERPlayers(playerinfo.Key, playerinfo.Value);
-                saveTag[i].GetComponent<SaveData>().AddERPlayers(playerinfo.Key, playerinfo.Value);
+                saveTag[i].GetComponent<Controller>().AddERPlayers(playerinfo.Key, playerinfo.Value);      
             }
         }
     }
