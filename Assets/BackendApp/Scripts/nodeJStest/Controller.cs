@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SocketIO;
+using LitJson;
 
 public class Controller : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Controller : MonoBehaviour
     private Dictionary<string, string> data = new Dictionary<string, string>();
     private int numberone;
     private int numbertwo;
-
+    
     private void Start()
     {
         socket.On("catchdata", ShowData);

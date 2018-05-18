@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 104797657}
   - component: {fileID: 104797656}
   - component: {fileID: 104797660}
+  - component: {fileID: 104797661}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -208,6 +209,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minutes: {fileID: 1160853959}
   seconds: {fileID: 2062918942}
+--- !u!114 &104797661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104797655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ceefed8621ede48979f7e709598fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getTime: {fileID: 104797660}
+  saveTime: {fileID: 1396132102}
 --- !u!1001 &136761362
 Prefab:
   m_ObjectHideFlags: 0
@@ -1712,8 +1726,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 104797660}
-        m_MethodName: SaveTime
+      - m_Target: {fileID: 104797661}
+        m_MethodName: StartMain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
