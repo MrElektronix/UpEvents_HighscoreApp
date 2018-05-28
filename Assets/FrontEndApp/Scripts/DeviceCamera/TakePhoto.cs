@@ -22,7 +22,7 @@ public class TakePhoto : MonoBehaviour {
 	
 
 	void Start(){
-		
+		_sr.enabled = false;
 		_webCamTexture = new WebCamTexture ();
 		if (!Directory.Exists (Application.persistentDataPath + "/" + "Media")) {
 			Debug.Log ("Create Dir 1");
@@ -37,6 +37,7 @@ public class TakePhoto : MonoBehaviour {
 		StartCoroutine (TakeSnapShot());
 	}
 	IEnumerator TakeSnapShot(){
+		
 		screenShotCount++;
 		Debug.Log ("Button Deactivated");
 		button.SetActive (false);
@@ -62,6 +63,7 @@ public class TakePhoto : MonoBehaviour {
 				Debug.Log ("Werkt wel, Foto opgeslagen onder" + _filePath);
 				DisplayPicture ();
 
+
 			} else {
 				Debug.Log ("Werkt Niet");
 			}
@@ -75,6 +77,7 @@ public class TakePhoto : MonoBehaviour {
 	void DisplayPicture(){
 			
 				//display picture 
+				_sr.enabled = true;
 				Debug.Log("Foto Genomen");
 				bytesFile = System.IO.File.ReadAllBytes(_filePath);
 				Debug.Log (bytesFile);
