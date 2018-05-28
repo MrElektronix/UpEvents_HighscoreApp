@@ -22,6 +22,7 @@ public class TakePhoto : MonoBehaviour {
 	
 
 	void Start(){
+		
 		_sr.enabled = false;
 		_webCamTexture = new WebCamTexture ();
 		if (!Directory.Exists (Application.persistentDataPath + "/" + "Media")) {
@@ -77,15 +78,17 @@ public class TakePhoto : MonoBehaviour {
 	void DisplayPicture(){
 			
 				//display picture 
-				_sr.enabled = true;
+				
+		_sr.enabled = true;
 				Debug.Log("Foto Genomen");
 				bytesFile = System.IO.File.ReadAllBytes(_filePath);
 				Debug.Log (bytesFile);
-                 tex = new Texture2D(0, 0, TextureFormat.Alpha8, false);
+				tex = new Texture2D(Screen.width, Screen.height, TextureFormat.Alpha8, false);
                  tex.LoadImage(bytesFile);
 					tex.Apply ();
 				  if(tex != null){
 					_sr.sprite = Sprite.Create(tex, new Rect(0,0,Screen.width,Screen.height), new Vector2(.5f, .5f));
+
 			}
 		}
 
