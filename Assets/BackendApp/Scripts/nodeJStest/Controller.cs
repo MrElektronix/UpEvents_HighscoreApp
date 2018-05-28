@@ -8,10 +8,15 @@ public class Controller : MonoBehaviour
 {
     public SocketIOComponent socket;
 
+    private string jsonString;
+    private JsonData Alert;
+
+
     private Dictionary<string, string> data = new Dictionary<string, string>();
     private int numberone;
     private int numbertwo;
     
+ 
     private void Start()
     {
         socket.On("catchdata", ShowData);
@@ -19,9 +24,10 @@ public class Controller : MonoBehaviour
 
     public void ShowData(SocketIOEvent e)
     {
-        //Debug.Log(e.data);
-        //Debug.Log(JsonUtility.FromJson<JSONObject>(e.data.ToString()));
+        jsonString = e.data.ToString();
+        Alert = JsonMapper.ToObject(jsonString);
 
+        Debug.Log(Alert["alert"]);
     }
 
     public void CreateDay()
@@ -74,9 +80,14 @@ public class Controller : MonoBehaviour
         data["Minutes"] = PlayerPrefs.GetString("Minutes");
         data["Seconds"] = PlayerPrefs.GetString("Seconds");
         //data["TeamName"] = PlayerPrefs.GetString("EscapeRoomTeamName");
-        if (int.TryParse(data["Minutes"], out numberone) && int.TryParse(data["Seconds"], out numbertwo))
+        if (int.TryParse(data["Minutes"], out numberone) && int.TryParse(data["Seconds"], out numbertwo) && data["Minutes"] != "" && data["Seconds"] != "")
         {
             socket.Emit("newTime", new JSONObject(data));
         }
+    }
+
+    public void DeleteTimes()
+    {
+        socket.Emit("deleteTime");
     }
 }

@@ -1567,6 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeamNameInput: {fileID: 1084328648}
+  button: {fileID: 628608590}
 --- !u!1001 &1147987277
 Prefab:
   m_ObjectHideFlags: 0
