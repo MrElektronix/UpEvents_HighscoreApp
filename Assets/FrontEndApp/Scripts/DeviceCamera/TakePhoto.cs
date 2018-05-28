@@ -13,7 +13,9 @@ public class TakePhoto : MonoBehaviour {
 	private string _originPath;
 	private string _filePath;
 	private int screenShotCount = 0;
-	public GameObject button;
+	public GameObject takePicture;
+	public GameObject retakePicture;
+	public GameObject sendPicture;
 	private byte[] bytesFile;
 	private Texture2D tex;
 	private bool shotTaken = false;
@@ -23,7 +25,8 @@ public class TakePhoto : MonoBehaviour {
 
 	void Start(){
 		
-		_sr.enabled = false;
+		sendPicture.SetActive (false);
+		retakePicture.SetActive (false);
 		_webCamTexture = new WebCamTexture ();
 		if (!Directory.Exists (Application.persistentDataPath + "/" + "Media")) {
 			Debug.Log ("Create Dir 1");
@@ -41,7 +44,7 @@ public class TakePhoto : MonoBehaviour {
 		
 		screenShotCount++;
 		Debug.Log ("Button Deactivated");
-		button.SetActive (false);
+		takePicture.SetActive (false);
 		//FileName Declareren 
 		screenShotFileName = "Screenshot__" + screenShotCount + System.DateTime.Now.ToString ("__yyyy-MM-dd") + ".png";
 		//Screenshot maken
@@ -49,7 +52,7 @@ public class TakePhoto : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		shotTaken = true;
 		//Button weer naar active
-		button.SetActive (true);
+
 		SavePhoto();
 	}
 
@@ -63,7 +66,6 @@ public class TakePhoto : MonoBehaviour {
 				System.IO.File.Move (_originPath, _filePath);
 				Debug.Log ("Werkt wel, Foto opgeslagen onder" + _filePath);
 				DisplayPicture ();
-
 
 			} else {
 				Debug.Log ("Werkt Niet");
@@ -79,7 +81,7 @@ public class TakePhoto : MonoBehaviour {
 			
 				//display picture 
 				
-		_sr.enabled = true;
+				
 				Debug.Log("Foto Genomen");
 				bytesFile = System.IO.File.ReadAllBytes(_filePath);
 				Debug.Log (bytesFile);
@@ -90,6 +92,8 @@ public class TakePhoto : MonoBehaviour {
 					_sr.sprite = Sprite.Create(tex, new Rect(0,0,Screen.width,Screen.height), new Vector2(.5f, .5f));
 
 			}
+		sendPicture.SetActive (true);
+		retakePicture.SetActive (true);
 		}
 
 	}
