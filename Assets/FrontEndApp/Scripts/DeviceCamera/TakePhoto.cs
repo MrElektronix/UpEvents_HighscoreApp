@@ -79,7 +79,7 @@ public class TakePhoto : MonoBehaviour {
 			
 				//display picture 
 				
-				_sr.enabled = true;
+		_sr.enabled = true;
 				Debug.Log("Foto Genomen");
 				bytesFile = System.IO.File.ReadAllBytes(_filePath);
 				Debug.Log (bytesFile);
