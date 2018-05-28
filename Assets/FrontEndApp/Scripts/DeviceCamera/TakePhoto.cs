@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
+
 
 
 public class TakePhoto : MonoBehaviour {
@@ -15,12 +17,12 @@ public class TakePhoto : MonoBehaviour {
 	private byte[] bytesFile;
 	private Texture2D tex;
 	private bool shotTaken = false;
-	public SpriteRenderer _sr;
+	public Image _sr;
 	
 	
 
 	void Start(){
-		_sr = gameObject.GetComponent<SpriteRenderer>() as SpriteRenderer;
+		
 		_webCamTexture = new WebCamTexture ();
 		if (!Directory.Exists (Application.persistentDataPath + "/" + "Media")) {
 			Debug.Log ("Create Dir 1");
@@ -81,13 +83,6 @@ public class TakePhoto : MonoBehaviour {
 					tex.Apply ();
 				  if(tex != null){
 					_sr.sprite = Sprite.Create(tex, new Rect(0,0,Screen.width,Screen.height), new Vector2(.5f, .5f));
-					
-						
-        		 //draw texture
-				//enable button om door te gaan
-				//enable button om opnieuw een foto te maken
-				//Zodra de foto oke is en naar de volgende scene wodt genavigeerd,delete genomen fotos 
-				//Zet screenshotcount terug naar 0
 			}
 		}
 
