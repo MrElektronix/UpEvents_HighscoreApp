@@ -103,6 +103,7 @@ public class TakePhoto : MonoBehaviour {
 				_sr.enabled = false;
 				sendPicture.SetActive (false);
 				retakePicture.SetActive (false);
+				takePicture.SetActive (true);
 			}
 		}
 
