@@ -1252,7 +1252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Escape Room 1
+  m_Text: Room 8
 --- !u!222 &756235378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2719,13 +2719,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Escape Room 1
+    - m_Text: Room 8
       m_Image: {fileID: 0}
-    - m_Text: Escape Room 2
+    - m_Text: Quarantaine
       m_Image: {fileID: 0}
-    - m_Text: Escape Room 3
+    - m_Text: The Bunker
       m_Image: {fileID: 0}
-    - m_Text: Escape Room 4
+    - m_Text: Vietnamese Victim
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

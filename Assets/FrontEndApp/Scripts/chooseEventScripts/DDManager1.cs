@@ -11,7 +11,7 @@ public class DDManager1 : MonoBehaviour {
 
 	void Start () {
 		
-		List <string> dropDownOptions = new List<string> { "Laser Gamen", "Escape Room" };
+		List <string> dropDownOptions = new List<string> {"Escape Room"};
 
 		_dropDown = gameObject.GetComponent<Dropdown> ();
 		_dropDown.ClearOptions ();
@@ -20,7 +20,7 @@ public class DDManager1 : MonoBehaviour {
 
 	void Update(){
 		ddValue = _dropDown.value;
-		if (ddValue == 0) {
+		if (ddValue == 1) {
 			_go.SetActive (false);
 		} else {
 			_go.SetActive (true);
