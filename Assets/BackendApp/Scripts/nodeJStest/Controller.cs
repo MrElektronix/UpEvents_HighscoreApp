@@ -90,4 +90,10 @@ public class Controller : MonoBehaviour
     {
         socket.Emit("deleteTime");
     }
+
+    public void SendPhoto()
+    {
+        data["Photo"] = PlayerPrefs.GetString("byteFile");
+        socket.Emit("newPhoto", new JSONObject(data));
+    }
 }

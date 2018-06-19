@@ -23,10 +23,13 @@ public class TakePhoto : MonoBehaviour
     public Image _sr;
 
 
+    private void Awake()
+    {
+        DeletePhoto();
+    }
 
     void Start()
     {
-
         _sr.enabled = false;
         screenShotCount = 0;
         sendPicture.SetActive(false);
@@ -55,6 +58,7 @@ public class TakePhoto : MonoBehaviour
         takePicture.SetActive(false);
         //FileName Declareren 
         screenShotFileName = "Screenshot__" + screenShotCount + System.DateTime.Now.ToString("__yyyy-MM-dd") + ".png";
+       
         //Screenshot maken
         ScreenCapture.CaptureScreenshot(screenShotFileName);
         yield return new WaitForSeconds(2);
@@ -78,7 +82,6 @@ public class TakePhoto : MonoBehaviour
                 System.IO.File.Move(_originPath, _filePath);
                 Debug.Log("Werkt wel, Foto opgeslagen onder" + _filePath);
                 DisplayPicture();
-
             }
             else
             {
@@ -94,17 +97,24 @@ public class TakePhoto : MonoBehaviour
         //display picture 
         _sr.enabled = true;
         Debug.Log("Foto Genomen");
-        bytesFile = System.IO.File.ReadAllBytes(_filePath);
-        Debug.Log(bytesFile);
+        bytesFile = File.ReadAllBytes(_filePath);
         tex = new Texture2D(Screen.width, Screen.height, TextureFormat.Alpha8, false);
         tex.LoadImage(bytesFile);
         tex.Apply();
+
         if (tex != null)
         {
             _sr.sprite = Sprite.Create(tex, new Rect(0, 0, Screen.width, Screen.height), new Vector2(.5f, .5f));
         }
         sendPicture.SetActive(true);
         retakePicture.SetActive(true);
+
+        byte[] toBytes = System.IO.File.ReadAllBytes(Application.persistentDataPath + "/Media/Pictures/" + screenShotFileName);
+        string base64Tex = System.Convert.ToBase64String(toBytes);
+        PlayerPrefs.SetString("byteFile", base64Tex);
+        //string base64Tex = System.Convert.ToBase64String(screenShotFileName);
+        //PlayerPrefs.SetString("byteFile", base64Tex);
+
     }
 
     public void DeletePhoto()
@@ -124,10 +134,8 @@ public class TakePhoto : MonoBehaviour
         }
     }
 
-    void SendPhoto()
+    public void SendPhoto()
     {
-        //Foto versturen naar server
-        DeletePhoto();
-
+        File.Delete(_filePath);
     }
 }

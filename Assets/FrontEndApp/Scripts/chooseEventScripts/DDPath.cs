@@ -15,9 +15,9 @@ public class DDPath : MonoBehaviour {
 	}
 	public void OnClick(){
 		if (dataValue == 0) {
-			SceneManager.LoadScene (3);
-		}else if(dataValue == 1){
 			SceneManager.LoadScene (2);
+		}else if(dataValue == 1){
+			SceneManager.LoadScene (3);
 		}
 	}
 
