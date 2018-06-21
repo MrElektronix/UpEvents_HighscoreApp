@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SocketIO;
 using LitJson;
+using System.IO;
 
 public class Controller : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Controller : MonoBehaviour
     private Dictionary<string, string> data = new Dictionary<string, string>();
     private int numberone;
     private int numbertwo;
+
+    private string _filePath;
     
  
     private void Start()
@@ -49,6 +52,8 @@ public class Controller : MonoBehaviour
         socket.Emit("newERTeam", new JSONObject(data));
     }
 
+    /*
+
     public void CreateLGTeam()
     {
         data["TeamNameOne"] = PlayerPrefs.GetString("LaserTagTeamNameOne");
@@ -61,6 +66,7 @@ public class Controller : MonoBehaviour
     {
 
     }
+    */
 
     public void AddERPlayers(string name, string email)
     {
@@ -93,7 +99,20 @@ public class Controller : MonoBehaviour
 
     public void SendPhoto()
     {
-        data["Photo"] = PlayerPrefs.GetString("byteFile");
-        socket.Emit("newPhoto", new JSONObject(data));
+        _filePath = Application.persistentDataPath + "/Media/Pictures/" + "p.txt";
+        StreamReader inp_stm = new StreamReader(_filePath);
+
+        while (!inp_stm.EndOfStream)
+        {
+            string inp_ln = inp_stm.ReadLine();
+
+            data["Photo"] = inp_ln;
+            socket.Emit("newPhoto", new JSONObject(data));
+        }
+
+        inp_stm.Close();
+
+
+        //data["Photo"] = PlayerPrefs.GetString("byteFile");
     }
 }

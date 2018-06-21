@@ -46,10 +46,12 @@ public class TakePhoto : MonoBehaviour
             DirectoryInfo info = Directory.CreateDirectory(Application.persistentDataPath + "/" + "Media/Pictures");
         }
     }
+
     public void Timer()
     {
         StartCoroutine(TakeSnapShot());
     }
+
     IEnumerator TakeSnapShot()
     {
 
@@ -111,7 +113,8 @@ public class TakePhoto : MonoBehaviour
 
         byte[] toBytes = System.IO.File.ReadAllBytes(Application.persistentDataPath + "/Media/Pictures/" + screenShotFileName);
         string base64Tex = System.Convert.ToBase64String(toBytes);
-        PlayerPrefs.SetString("byteFile", base64Tex);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Media/Pictures/p.txt", base64Tex);
+        //PlayerPrefs.SetString("byteFile", base64Tex);
         //string base64Tex = System.Convert.ToBase64String(screenShotFileName);
         //PlayerPrefs.SetString("byteFile", base64Tex);
 
