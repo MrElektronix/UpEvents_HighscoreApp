@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 159014322}
   - component: {fileID: 159014321}
   - component: {fileID: 159014320}
+  - component: {fileID: 159014325}
+  - component: {fileID: 159014324}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -330,6 +332,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159014324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159014319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc83416eea4b64771a5369cf083c2bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: 0
+--- !u!114 &159014325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 159014319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e462d8d8a649f64c920104d2fec6904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 659189754}
+  sceneLoader: {fileID: 159014324}
 --- !u!1001 &399592836
 Prefab:
   m_ObjectHideFlags: 0
@@ -705,6 +732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scene: 3
+--- !u!1 &659189754 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1131769367187006, guid: f059e4d77e376f84fb02dd219e392c36,
+    type: 2}
+  m_PrefabInternal: {fileID: 399592836}
 --- !u!1001 &676207810
 Prefab:
   m_ObjectHideFlags: 0

@@ -8,7 +8,16 @@ public class SceneLoader : MonoBehaviour {
 	public int Scene;
 
 	public void OnClick(){
-        StartCoroutine(WaitForCertainSeconds(0.1f));
+        if(PlayerPrefs.GetString("wrongTeamName") == "used")
+        {
+            Scene = 2;
+            StartCoroutine(WaitForCertainSeconds(0.1f));
+        }
+        else
+        {
+            StartCoroutine(WaitForCertainSeconds(0.1f));
+        }
+        
     }
 
     IEnumerator WaitForCertainSeconds(float secToWait)
