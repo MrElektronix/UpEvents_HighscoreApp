@@ -43,7 +43,7 @@ public class PlayerInfo : MonoBehaviour {
             foreach (KeyValuePair<string, string> playerinfo in playerInfoDict)
             {
                 //saveData.AddERPlayers(playerinfo.Key, playerinfo.Value);
-                saveTag[i].GetComponent<Controller>().AddERPlayers(playerinfo.Key, playerinfo.Value);
+                saveTag[i].GetComponent<Controller>().AddERPlayers(playerinfo.Key, playerinfo.Value);      
             }
         }
     }
