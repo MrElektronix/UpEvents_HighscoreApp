@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 1160853961}
   - component: {fileID: 1160853960}
   - component: {fileID: 1160853959}
+  - component: {fileID: 1160853962}
   m_Layer: 5
   m_Name: Minutes
   m_TagString: Untagged
@@ -1412,6 +1413,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160853957}
+--- !u!114 &1160853962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160853957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf66beaa87d191479a78f955367a4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 1160853959}
+  button: {fileID: 1396132100}
 --- !u!1 &1181023407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,6 +2729,7 @@ GameObject:
   - component: {fileID: 2062918944}
   - component: {fileID: 2062918943}
   - component: {fileID: 2062918942}
+  - component: {fileID: 2062918941}
   m_Layer: 5
   m_Name: Seconds
   m_TagString: Untagged
@@ -2742,6 +2757,19 @@ RectTransform:
   m_AnchoredPosition: {x: 219.44574, y: 0}
   m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2062918941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062918939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf66beaa87d191479a78f955367a4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 2062918942}
+  button: {fileID: 1396132100}
 --- !u!114 &2062918942
 MonoBehaviour:
   m_ObjectHideFlags: 0

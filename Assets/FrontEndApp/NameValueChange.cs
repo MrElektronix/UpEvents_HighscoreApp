@@ -31,9 +31,8 @@ public class NameValueChange : MonoBehaviour {
 		{
 			
 			Debug.Log ("Locked");
-
-
 		}
+
 		else if (input.text.Length == 0)
 		{
 			Debug.Log("Main Input Empty");

@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
 
     private string jsonString;
     private JsonData Alert;
-
+    private List<string> names = new List<string>();
 
     private Dictionary<string, string> data = new Dictionary<string, string>();
     private int numberone;
@@ -22,6 +22,7 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
+        names.Clear();
         socket.On("usedteamname", Error);
     }
 
@@ -71,10 +72,20 @@ public class Controller : MonoBehaviour
 
     public void AddERPlayers(string name, string email)
     {
+        /*
+        names.Add(name);
+
+        foreach (string item in names)
+        {
+            Debug.Log(item);
+        }
+        */
+       
         data["PlayerInfo_names"] = name;
         data["PlayerInfo_email"] = email;
-
+        
         socket.Emit("newERPlayers", new JSONObject(data));
+        
     }
 
     public void SendEmail()
