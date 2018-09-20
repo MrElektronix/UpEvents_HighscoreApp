@@ -90,6 +90,7 @@ public class Controller : MonoBehaviour
 
     public void SendEmail()
     {
+        Debug.Log("emailll");
         socket.Emit("sendMail");
     }
 

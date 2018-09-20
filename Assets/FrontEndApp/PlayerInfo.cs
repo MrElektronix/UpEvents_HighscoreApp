@@ -26,15 +26,21 @@ public class PlayerInfo : MonoBehaviour {
 
         for (int i = 0; i < temp.Length; i++)
         {
-            Debug.Log(temp[i].GetComponent<PlayerInfo>()._name.NameSpeler);
-            Debug.Log(temp[i].GetComponent<PlayerInfo>()._email.EmailSpeler);
-            /*
+            if (temp[i].GetComponent<PlayerInfo>()._name.NameSpeler == null)
+            {
+                temp[i].GetComponent<PlayerInfo>()._name.NameSpeler = "";
+            }
+
+            if (temp[i].GetComponent<PlayerInfo>()._email.EmailSpeler == null)
+            {
+                temp[i].GetComponent<PlayerInfo>()._email.EmailSpeler = "";
+            }
+
             playerInfoDict.Add(temp[i].GetComponent<PlayerInfo>()._name.NameSpeler, temp[i].GetComponent<PlayerInfo>()._email.EmailSpeler);
             if (i == (temp.Length - 1))
             {
                 SavePlayerInfo();
             }
-            */
         }
     }
 

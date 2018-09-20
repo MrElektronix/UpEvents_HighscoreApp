@@ -17,13 +17,22 @@ public class GoNext : MonoBehaviour
     private void Update()
     {
         _input_text = inputField.text;
-        if (_input_text == "" || int.Parse(_input_text) > 60 || int.Parse(_input_text) < 0 || _input_text[0] != 0)
+        if (_input_text == "" || int.Parse(_input_text) > 60 || int.Parse(_input_text) < 0 || _input_text[0] == 0)
         {
             button.SetActive(false);
         }
         else
         {
-            button.SetActive(true);
+            if (_input_text[0].ToString() == "0")
+            {
+                Debug.Log("nooo");
+                button.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("yesss");
+                button.SetActive(true);
+            }
         }
     }
 }
